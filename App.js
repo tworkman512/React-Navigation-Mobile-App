@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 class HomeScreen extends Component {
@@ -7,6 +7,10 @@ class HomeScreen extends Component {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Home Screen. Hey, it still works!!!</Text>
+        <Button
+          title="Go to Details"
+          onPress={() => this.props.navigation.navigate('Details')}
+        />
       </View>
     )
   }
@@ -17,6 +21,12 @@ class DetailsScreen extends Component {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <Text>Details Screen Test</Text>
+        <TouchableOpacity>
+          <Button
+            title="Go to Home"
+            onPress={() => this.props.navigation.navigate('Home')}
+          />
+        </TouchableOpacity>
       </View>
     )
   }
@@ -28,7 +38,7 @@ const AppNavigator = createStackNavigator(
     Details: DetailsScreen,
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: 'Home'
   },
 )
 
