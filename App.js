@@ -31,8 +31,12 @@ class DetailsScreen extends Component {
             onPress={() => this.props.navigation.navigate('Home')}
           />
           <Button
-            title="Go back"
+            title="Go back 1 screen in Stack"
             onPress={() => this.props.navigation.goBack()}
+          />
+          <Button
+            title="Go back to top of Stack"
+            onPress={() => this.props.navigation.popToTop()}
           />
         </TouchableOpacity>
       </View>
