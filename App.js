@@ -4,7 +4,14 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 class HomeScreen extends Component {
   static navigationOptions = {
-    title: 'Home title'
+    title: 'Home title',
+    headerStyle: {
+      backgroundColor: '#f4511e',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   }
   render() {
     return (
