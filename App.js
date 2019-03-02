@@ -61,6 +61,10 @@ class DetailsScreen extends Component {
             title="Go back to top of Stack"
             onPress={() => this.props.navigation.popToTop()}
           />
+          <Button
+            title="Update the title"
+            onPress={() => this.props.navigation.setParams({otherParam: 'Updated!'})}
+          />
         </TouchableOpacity>
       </View>
     )
