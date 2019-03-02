@@ -15,7 +15,7 @@ class HomeScreen extends Component {
           onPress={() => {
             this.props.navigation.navigate('Details', {
               itemId: 86,
-              otherParam: 'anything can go here',
+              otherParam: 'Details Title',
             })
           }}
         />
@@ -25,8 +25,10 @@ class HomeScreen extends Component {
 }
 
 class DetailsScreen extends Component {
-  static navigationOptions = {
-    title: 'Details title'
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam('otherParam', 'A Nested Details Screen'),
+    }
   }
   render() {
     const { navigation } = this.props
