@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 class HomeScreen extends Component {
+  static navigationOptions = {
+    title: 'Home title'
+  }
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
@@ -22,6 +25,9 @@ class HomeScreen extends Component {
 }
 
 class DetailsScreen extends Component {
+  static navigationOptions = {
+    title: 'Details title'
+  }
   render() {
     const { navigation } = this.props
     const itemId = navigation.getParam('itemId', 'NO-ID')
