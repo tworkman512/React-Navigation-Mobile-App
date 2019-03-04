@@ -5,12 +5,26 @@ import {
   View,
   Button,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
+
+class LogoTitle extends Component {
+  render() {
+    return (
+      <Image
+        source={require('./assets/boba-fett.png')}
+        style={{ width: 30, height: 30 }}
+      />
+    )
+  }
+}
+
 class HomeScreen extends Component {
   static navigationOptions = {
-    title: 'Home title',
+    // title: 'Home title',
+    headerTitle: <LogoTitle />,
   }
   render() {
     return (
